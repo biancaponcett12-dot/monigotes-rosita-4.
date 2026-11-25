@@ -1,0 +1,620 @@
+
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #F8F0E5;
+  color: #44353A;
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* =========================
+   BARRA SUPERIOR
+========================= */
+
+.announcement {
+  background: #702D43;
+  color: #FFF9F3;
+  text-align: center;
+  padding: 11px 15px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/* =========================
+   NAVEGACIÓN
+========================= */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+  background: #FFF9F3;
+  gap: 20px;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  color: #702D43;
+  font-weight: 700;
+}
+
+.logo span {
+  color: #A64F68;
+  font-style: italic;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #44353A;
+  font-size: 13px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #A64F68;
+}
+
+/* =========================
+   PORTADA
+========================= */
+
+.hero {
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  padding: 80px 10%;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(74, 29, 47, 0.78),
+      rgba(74, 29, 47, 0.36)
+    ),
+    url("./AdobeStock_849654985 (1).jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #FFF9F3;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.eyebrow {
+  color: #E4C58D;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  margin-bottom: 22px;
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(38px, 6vw, 65px);
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.hero h1 em {
+  color: #E4C58D;
+}
+
+.hero-subtitle {
+  color: #E9C6C8;
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  max-width: 550px;
+}
+
+.hero p {
+  font-size: 15px;
+  line-height: 1.9;
+  max-width: 520px;
+  color: #F5EDE9;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn {
+  display: inline-block;
+  background: #A64F68;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 15px 27px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #702D43;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   INTRODUCCIÓN
+========================= */
+
+.intro {
+  text-align: center;
+  padding: 55px 20px 35px;
+}
+
+.intro small {
+  color: #A64F68;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.intro h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(27px, 4vw, 40px);
+  color: #702D43;
+  margin-top: 10px;
+}
+
+.ornament {
+  color: #D5AD65;
+  margin: 12px 0;
+  font-size: 20px;
+}
+
+.intro p {
+  color: #81747A;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================
+   CATÁLOGO
+========================= */
+
+.catalog {
+  padding: 15px 8% 90px;
+}
+
+.catalog-top {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.catalog-top h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: #702D43;
+}
+
+/* =========================
+   AVISO DE MÁS MODELOS
+========================= */
+
+.catalog-notice {
+  background: #F1E2DC;
+  border: 2px solid #A64F68;
+  padding: 30px 25px;
+  margin: 20px auto 30px;
+  text-align: center;
+  border-radius: 18px;
+  max-width: 850px;
+  box-shadow: 0 5px 15px rgba(112, 45, 67, 0.08);
+}
+
+.catalog-notice h2 {
+  color: #702D43;
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.catalog-notice p {
+  color: #44353A;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* =========================
+   CUADRÍCULA DE PRODUCTOS
+========================= */
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* =========================
+   TARJETAS DECORATIVAS
+========================= */
+
+.product {
+  position: relative;
+  background: #FFF9F3;
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 8px;
+  border: 2px solid #702D43;
+  border-radius: 20px;
+  box-shadow:
+    0 5px 0 #A64F68,
+    0 9px 22px rgba(112, 45, 67, 0.12);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-7px);
+  box-shadow:
+    0 5px 0 #D5AD65,
+    0 14px 28px rgba(112, 45, 67, 0.18);
+}
+
+/* =========================
+   IMÁGENES CON MARCO
+========================= */
+
+.product-image {
+  width: 100%;
+  height: 310px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  background: #F1E2DC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #D5AD65;
+  border-radius: 14px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.product:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #702D43;
+  color: #FFFFFF;
+  padding: 8px 13px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 20px;
+}
+
+/* =========================
+   INFORMACIÓN DEL PRODUCTO
+========================= */
+
+.product-info {
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.category {
+  color: #A64F68;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.product-info h4 {
+  font-family: 'Playfair Display', serif;
+  color: #702D43;
+  font-size: 23px;
+  margin: 10px 0;
+}
+
+.description {
+  color: #81747A;
+  font-size: 13px;
+  line-height: 1.8;
+  min-height: 48px;
+}
+
+/* =========================
+   PEDIDO
+========================= */
+
+.product-bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 22px;
+}
+
+.order {
+  background: #702D43;
+  color: #FFFFFF;
+  padding: 12px 18px;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 25px;
+  transition: background 0.3s, transform 0.3s;
+  white-space: nowrap;
+}
+
+.order:hover {
+  background: #A64F68;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   BANNER DE CONTACTO
+========================= */
+
+.banner {
+  background: #702D43;
+  color: #FFF9F3;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.banner h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 4vw, 42px);
+  margin-bottom: 18px;
+}
+
+.banner p {
+  color: #F1E2DC;
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 28px;
+}
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+footer {
+  background: #F1E2DC;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+footer .logo {
+  margin-bottom: 22px;
+}
+
+.footer-line {
+  width: 60px;
+  height: 3px;
+  background: #D5AD65;
+  margin: 0 auto 20px;
+  border-radius: 5px;
+}
+
+footer p {
+  color: #81747A;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 900px) {
+
+  .products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .product-image {
+    height: 290px;
+  }
+
+  .catalog {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+}
+
+/* =========================
+   CELULARES
+========================= */
+
+@media (max-width: 600px) {
+
+  nav {
+    padding: 18px 5%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 23px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 22px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .hero {
+    min-height: 470px;
+    padding: 65px 7%;
+    background-position: center;
+  }
+
+  .hero h1 {
+    font-size: 39px;
+  }
+
+  .hero-subtitle {
+    font-size: 20px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .intro {
+    padding: 45px 18px 25px;
+  }
+
+  .intro p br {
+    display: none;
+  }
+
+  .catalog {
+    padding: 10px 6% 65px;
+  }
+
+  .catalog-top {
+    margin-bottom: 20px;
+  }
+
+  .catalog-top h3 {
+    font-size: 29px;
+  }
+
+  .catalog-notice {
+    padding: 23px 17px;
+    margin: 18px auto 25px;
+  }
+
+  .catalog-notice h2 {
+    font-size: 24px;
+  }
+
+  .catalog-notice p {
+    font-size: 15px;
+  }
+
+  .products {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+  }
+
+  .product-image {
+    height: 340px;
+  }
+
+  .product-info {
+    padding: 20px 16px;
+  }
+
+  .banner {
+    padding: 65px 20px;
+  }
+
+}
+
+/* =========================
+   CELULARES PEQUEÑOS
+========================= */
+
+@media (max-width: 380px) {
+
+  .announcement {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .logo {
+    font-size: 21px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .product-image {
+    height: 290px;
+  }
+
+  .catalog-notice h2 {
+    font-size: 21px;
+  }
+
+  .catalog-notice p {
+    font-size: 14px;
+  }
+
+  .product-info h4 {
+    font-size: 21px;
+  }
+
+}
