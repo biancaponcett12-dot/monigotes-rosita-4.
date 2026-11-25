@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta name="google-site-verification" content="bVDMGBinudzYXS1GcDP2c96lXLXerw5t1qCZYA52jPA" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -865,7 +864,7 @@
 
       <article class="product" data-category="personajes">
         <div class="product-image">
-          <img src="pluto.jpeg" alt="Producto 43">
+          <img src="imagen-producto-43.jpeg" alt="Producto 43">
         </div>
         <div class="product-info">
           <span class="category">Personajes</span>
@@ -906,7 +905,6 @@
   <!-- FOOTER -->
 
   <footer>
-
     <div class="logo">
       Monigotes <span>Rosita</span>
     </div>
@@ -918,8 +916,24 @@
       <br>
       © 2026 Monigotes de Rosita
     </p>
-
   </footer>
+
+  <script>
+    document.querySelectorAll(".product .order").forEach((boton) => {
+      boton.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const producto = this.closest(".product");
+        const nombre = producto.querySelector("h4").textContent.trim();
+
+        const mensaje = `¡Hola! 😊 Me interesa el monigote "${nombre}" de su catálogo. ¿Me pueden dar información sobre su disponibilidad y precio?`;
+
+        const enlace = `https://wa.me/593997462913?text=${encodeURIComponent(mensaje)}`;
+
+        window.open(enlace, "_blank");
+      });
+    });
+  </script>
 
 </body>
 </html>
